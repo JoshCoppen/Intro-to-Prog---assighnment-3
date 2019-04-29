@@ -24,13 +24,13 @@ public class MyRestaurant {
 		while (input != null) {
 			int selection = Integer.parseInt(input);
 			if (selection == 1) {
-				frontBarFile();
+				menu("FrontBarMenu.txt");
 				showMenuItems();
 			} else if (selection == 2) {
-				bistroFile();
+				menu("BistroMenu.txt");
 				showMenuItems();
 			} else if (selection == 3) {
-				dessertBarFile();
+				menu("DessertBarMenu.txt");
 				showMenuItems();
 			} else {
 				showMsg("you have made an invalid selection, please try again");
@@ -43,12 +43,12 @@ public class MyRestaurant {
 		input = getInput(startMenu);
 	}
 
-	private void bistroFile() {
+	private void menu(String file) {
 
 		BufferedReader inFile = null;
 
 		try {
-			inFile = new BufferedReader(new FileReader("BistroMenu.txt"));
+			inFile = new BufferedReader(new FileReader(file));
 			int i = 0;
 			String currLine = inFile.readLine();
 			while (i < this.arrayLength) {
@@ -57,48 +57,9 @@ public class MyRestaurant {
 				currLine = inFile.readLine();
 			}
 			inFile.close();
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
 			return;
-		}
-	}
-
-	private void frontBarFile() {
-
-		BufferedReader inFile = null;
-
-		try {
-			inFile = new BufferedReader(new FileReader("FrontBarMenu.txt"));
-			int i = 0;
-			String currLine = inFile.readLine();
-			while (i < this.arrayLength) {
-				this.menus[i] = new MenuItem(currLine);
-				i += 1;
-				currLine = inFile.readLine();
-			}
-			inFile.close();
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			return;
-		}
-	}
-
-	private void dessertBarFile() {
-
-		BufferedReader inFile = null;
-
-		try {
-			inFile = new BufferedReader(new FileReader("DessertBarMenu.txt"));
-			int i = 0;
-			String currLine = inFile.readLine();
-			while (i < this.arrayLength) {
-				this.menus[i] = new MenuItem(currLine);
-				i += 1;
-				currLine = inFile.readLine();
-			}
-			inFile.close();
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			showMsg(e.getMessage());
 			return;
 		}
 	}
@@ -114,21 +75,22 @@ public class MyRestaurant {
 		}
 		msg += "PRESS CANCEL TO EXIT";
 		String input = getInput(msg);
-		String total = "The food you have ordered are as follows \n";
-		i= 0;
+
+		String total = "The food you have ordered are as follows: \n";
+		i = 0;
 		while (input != null) {
 			int choices = Integer.parseInt(input);
-			total += i + ") " + this.menus[choices].getNameItem() + "\n";
+			total += this.menus[choices].getNameItem() + "\n";
 			input = getInput(msg);
-			i +=1;
-//			if (choices > this.arrayLength || choices < this.arrayLength) {
-//				getInput("please enter a correct number from the menu");
-//			}
+			i += 1;
+			if (choices > this.arrayLength || choices < 0) {
+				getInput("please enter a correct number from the menu" + msg);
+			}
 		}
 		showMsg(total);
 		return;
 	}
-	
+
 	private void setOfTheDay() {
 		this.menus[0].setNameItem(getInput("What is the " + this.menus[0].getNameItem() + "?"));
 		return;
