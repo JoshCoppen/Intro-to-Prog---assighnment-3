@@ -1,0 +1,10 @@
+Soup of the Day,6  
+Bowl of Wedges, 8.50
+Fish and Chips, 12
+Spaghetti Bolognese, 13
+Fettuccini Carbonara, 13
+Cheeseburger, 15.50
+Chicken Parmigiana, 19.90
+Chicken Burger, 16
+Hawaiian Pizza, 14
+Meat Lovers Pizza, 14

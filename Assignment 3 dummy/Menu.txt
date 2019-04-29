@@ -1,0 +1,10 @@
+0) Fish and Chips
+1) Bowl of Wedges
+2) Soup of the Day
+3) Spaghetti Bolognese
+4) Fettuccini Carbonara
+5) Cheeseburger
+6) Chicken Parmigiana
+7) Chicken Burger
+8) Hawaiian Pizza
+9) Meat Lovers Pizza
