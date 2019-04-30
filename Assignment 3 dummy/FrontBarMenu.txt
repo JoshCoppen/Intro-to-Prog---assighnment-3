@@ -1,10 +1,10 @@
-Soup of the Day,6  
-Bowl of Wedges, 8.50
-Fish and Chips, 12
-Spaghetti Bolognese, 13
-Fettuccini Carbonara, 13
-Cheeseburger, 15.50
-Chicken Parmigiana, 19.90
-Chicken Burger, 16
-Hawaiian Pizza, 14
-Meat Lovers Pizza, 14
+Soup of the Day/6/Today's soup of the day.   
+Bowl of Wedges/8.50/A bowl of wedges accompanied by sweet chili sauce and sour cream. 
+Fish and Chips/12/A piece of butterfish Served on a bed of chips and tartare sauce.
+Spaghetti Bolognese/13/Your traditional pasta and sauce.
+Fettuccini Carbonara/13/Fettuccini covered in a creamy sauce.
+Cheeseburger/15.50/A beef patty with grilled cheese in a toasted bun.
+Chicken Burger/16/A chicken patty with cheese, lettuce and tomato in a bun.
+Chicken Parmigiana/19.90/Parmy of Parma? (it is Parmy in case you did not know)
+Hawaiian Pizza/14/Wood oven pizza with ham and pineapple.
+Meat Lovers Pizza/14/Wood oven pizza with beef, ham, bacon, pepperoni, Italian sausage on a bbq base.
